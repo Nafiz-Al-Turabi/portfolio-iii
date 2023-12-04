@@ -1,0 +1,22 @@
+
+#scroll {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  #scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* @keyframes colorChange {
+    0% { color: #71e3ff; }
+    25% { color: #42f0fc; }
+    50% { color: #4aa0fd; }
+    75% { color: #3ea8ff; }
+    100% { color: #71e3ff; }
+  }
+  
+  .animated-text {
+    animation: colorChange 4s linear infinite;
+  }
+   */
