@@ -16,7 +16,7 @@ const Banner = () => {
 
     return (
         <div className='p-2' id='scroll'>
-            <div className={isDarkMode ? 'lg:flex justify-between py-10 lg:py-0 lg:pb-0 bg-gray-900/80 items-center w-full lg:h-96 lg:px-10' : 'lg:flex justify-between py-10 lg:py-0 lg:pb-0  bg-[#f9fc2f] items-center w-full lg:h-96 lg:px-10'}>
+            <div className={isDarkMode ? 'lg:flex justify-between py-10 lg:py-0 lg:pb-0 bg-gray-900/80 items-center w-full lg:h-96 lg:pr-10' : 'lg:flex justify-between py-10 lg:py-0 lg:pb-0  bg-[#fcfcc3] items-center w-full lg:h-96 lg:pr-10'}>
                 <div className='flex justify-center '>
                     <img src={nafiz} className='h-96 hidden lg:block' alt="" />
                 </div>
@@ -26,10 +26,10 @@ const Banner = () => {
                     <Link className='py-2 px-4 md:py-3 md:px-8 font-semibold tracking-widest bg-yellow-500  '>Explore more</Link>
                 </div>
             </div>
-            {/* <div>
+            <div>
                 <p className=' text-lg text-justify'>Hello! I’m Nafiz Al Turabi. Web Developer with over 1.5 years of learning experience and 3 months working experience. Experienced with all stages of the development cycle for dynamic web projects.</p>
                 <p>lorem500</p>
-            </div> */}
+            </div>
             
             <div className='flex-auto lg:flex justify-between mt-5'>
                 <p className='text-[#f9fc2f] font-extrabold text-2xl flex items-center'>1 +

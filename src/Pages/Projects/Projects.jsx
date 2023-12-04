@@ -2,8 +2,8 @@ import React from 'react';
 
 const Projects = () => {
     return (
-        <div>
-            hello this my projects
+        <div className='bg-gray-500 m-2'>
+            lorem500
         </div>
     );
 };

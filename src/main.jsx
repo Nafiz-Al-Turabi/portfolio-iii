@@ -10,6 +10,7 @@ import Layout from './Layout/Layout.jsx';
 import Home from './Home/Home/Home.jsx';
 import { ThemeProvider } from './Provider/ThemeContext.jsx';
 import Projects from './Pages/Projects/Projects.jsx';
+import Contact from './Pages/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:'/projects',
         element:<Projects></Projects>
+      },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
       }
     ]
   },

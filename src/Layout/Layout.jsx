@@ -19,6 +19,7 @@ const Layout = () => {
     const [isDrawerOpen, setDrawerOpen] = useState(true);
     const { isDarkMode, toggleDarkMode } = useTheme();
     const [isMenuOpen, setMenuOpen] = useState(false);
+    
 
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -32,7 +33,7 @@ const Layout = () => {
         setDrawerOpen(false);
     };
     return (
-        <div className={`flex h-screen ${isDarkMode ? 'dark' : 'light'}`}>
+        <div className={`flex  ${isDarkMode ? 'dark' : 'light'}`}>
             <nav
                 className={`bg-yellow-500 w-full lg:w-0  md:bg-transparent h-screen md:h-[98%] lg:h-[98%] fixed   md:rounded-lg lg:rounded-none p-5 text-white py-4 transition-transform transform z-50 ${isDrawerOpen ? 'translate-x-0 duration-700' : '-translate-x-full'
                     } md:translate-x-0`}
@@ -74,14 +75,14 @@ const Layout = () => {
 
                     <ActiveLink to="/projects" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Projects'><GoProjectTemplate /></ActiveLink>
 
-                    <ActiveLink to="/projects" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Contact'><MdContacts /></ActiveLink>
+                    <ActiveLink to="/contact" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Contact'><MdContacts /></ActiveLink>
 
                     <ActiveLink to="/projects" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Blogs'><TbBrandBlogger /></ActiveLink>
                 </div>
 
                 <Outlet />
 
-                <div className={isDarkMode ? "flex justify-between  bg-gray-950/80 mt-10 p-5" : "flex justify-between  bg-gray-300 mt-10 p-5"}>
+                <div className={isDarkMode ? "flex justify-between  bg-gray-950/80 mt-10 p-5 mx-2 mb-6" : "flex justify-between  bg-gray-300 mt-10 p-5 mx-2 mb-6"}>
                     <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
                     <p>Email: nafizalturabi@gmail.com</p>
 
