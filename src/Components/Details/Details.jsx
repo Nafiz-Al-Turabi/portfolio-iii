@@ -26,7 +26,7 @@ const Details = () => {
                         <p className='text-white fonr-bold'>HTML</p>
                         <p className='text-white fonr-semibold '>90%</p>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                    <div className="w-full bg-zinc-200 rounded-full h-1.5 dark:bg-zinc-700">
                         <div className="bg-[#f9fc2f] h-1.5 rounded-full" style={{ width: '95%' }}></div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Details = () => {
                         <p className='text-white fonr-bold'>CSS</p>
                         <p className='text-white fonr-semibold '>90%</p>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                    <div className="w-full bg-zinc-200 rounded-full h-1.5 dark:bg-zinc-700">
                         <div className="bg-[#f9fc2f] h-1.5 rounded-full" style={{ width: '90%' }}></div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ const Details = () => {
                         <p className='text-white fonr-bold'>JS</p>
                         <p className='text-white fonr-semibold '>75%</p>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                    <div className="w-full bg-zinc-200 rounded-full h-1.5 dark:bg-zinc-700">
                         <div className="bg-[#f9fc2f] h-1.5 rounded-full" style={{ width: '75%' }}></div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ const Details = () => {
                         <p className='text-white fonr-bold'>React</p>
                         <p className='text-white fonr-semibold '>65%</p>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                    <div className="w-full bg-zinc-200 rounded-full h-1.5 dark:bg-zinc-700">
                         <div className="bg-[#f9fc2f] h-1.5 rounded-full" style={{ width: '65%' }}></div>
                     </div>
                 </div>

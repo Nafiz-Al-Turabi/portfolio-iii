@@ -1,0 +1,140 @@
+[
+    
+    {
+        "id": 1,
+        "title": "Toy Marketplace",
+        "image":"https://i.ibb.co/cYZsbgM/Toyman.png",
+        "live": "https://toy-marketplace-7a3cc.web.app/",
+        "git": "https://github.com/Nafiz-Al-Turabi/toy-marketplace-client",
+        "git_server": "https://github.com/Nafiz-Al-Turabi/toy-marketplace-server",
+        "platform": "Yes",
+        "category": "Full-Stack",
+        "technology": [
+            {
+                "name": "HTML-5"
+            },
+            {
+                "name": "CSS-3"
+            },
+            {
+                "name": "Tailwind"
+            },
+            {
+                "name": "JavaScript"
+            },
+            {
+                "name": "React.js"
+            },
+            {
+                "name": "Node.js"
+            },
+            {
+                "name": "Express.js"
+            },
+            {
+                "name": "Firbase"
+            },
+            {
+                "name": "MongoDB"
+            }
+            
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Swigo",
+        "image":"https://i.ibb.co/Vmv1MPQ/swigo.png",
+        "live": "https://voluble-cobbler-586318.netlify.app/",
+        "git": "https://github.com/Nafiz-Al-Turabi/swigo",
+        "platform": "No",
+        "category": "Front-End",
+        "technology": [
+            {
+                "name": "HTML-5"
+            },
+            {
+                "name": "CSS-3"
+            },
+            {
+                "name": "Tailwind"
+            },
+            {
+                "name": "JavaScript"
+            },
+            {
+                "name": "React.js"
+            },
+            {
+                "name": "Node.js"
+            }
+            
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Ranna-Chef Recipe Hunter",
+        "image":"https://i.ibb.co/y6SnFQr/Ranna.png",
+        "live": "https://651bc8826623283ff812d7ad--superlative-torte-8a4710.netlify.app/",
+        "git": "https://github.com/Nafiz-Al-Turabi/chef-recipe-hunter",
+        "git_server": "https://github.com/Nafiz-Al-Turabi/chef-recipe-hunting-server",
+        "platform": "Yes",
+        "category": "Full-Stack",
+        "technology": [
+            {
+                "name": "HTML-5"
+            },
+            {
+                "name": "CSS-3"
+            },
+            {
+                "name": "Tailwind"
+            },
+            {
+                "name": "JavaScript"
+            },
+            {
+                "name": "React.js"
+            },
+            {
+                "name": "Node.js"
+            },
+            {
+                "name": "Express.js"
+            },
+            {
+                "name": "Firbase"
+            },
+            {
+                "name": "MongoDB"
+            }
+            
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Traveling",
+        "image":"https://i.ibb.co/TYXSh0z/Traveling.png",
+        "live": "https://gilded-semolina-4b464e.netlify.app/",
+        "git": "https://github.com/Nafiz-Al-Turabi/Traveling",
+        "description": "lorem hello",
+        "platform": "No",
+        "category": "Front-End",
+        "technology": [
+            {
+                "name": "HTML-5"
+            },
+            {
+                "name": "CSS-3"
+            },
+            {
+                "name": "Tailwind"
+            },
+            {
+                "name": "JavaScript"
+            },
+            {
+                "name": "React.js"
+            }
+        ]
+    }
+]
