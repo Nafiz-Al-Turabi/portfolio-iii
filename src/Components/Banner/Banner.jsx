@@ -23,7 +23,7 @@ const Banner = () => {
                 <div className='text-center lg:text-right'>
                     <h1 className=' text-5xl lg:w-[550px] font-extrabold'>Discover my Amazing Art Space!</h1>
                     <p className=' text-2xlfont-bold md:font-extrabold mt-6 mb-10'>I'm <span className='animated-text text-base font-bold'>Jonior Full Stack Web Developer</span></p>
-                    <button className='w-44 p-3 font-semibold  tracking-wider bg-yellow-500 hover:tracking-widest duration-300 '>
+                    <button className='w-44 p-3 font-semibold  tracking-wider bg-yellow-500 sha hover:tracking-widest duration-300 '>
                         <Link to='/'>Explore more</Link>
                     </button>
                 </div>
@@ -44,9 +44,9 @@ const Banner = () => {
             </div>
 
             <div className='flex justify-between items-center mt-14 mb-10'>
-                <hr className='w-2/5 border border-zinc-300'/>
-                <h1 className=' text-2xl font-bold'>My Latest Projects</h1>
-                <hr className='w-2/5 border border-zinc-300'/>
+                <hr className='w-1/4 md:w-2/5 border border-zinc-300' />
+                <h1 className='text-lg md:text-2xl font-bold'>My latest Projects</h1>
+                <hr className='w-1/4 md:w-2/5 border border-zinc-300' />
             </div>
 
             <div className={isDarkMode ? "w-full lg:w-80 rounded-3xl bg-zinc-900/50 overflow-hidden   shadow-lg shadow-white/5 relative" : "w-full lg:w-80 rounded-3xl bg-zinc-100 overflow-hidden shadow-lg  relative"}>
@@ -63,7 +63,7 @@ const Banner = () => {
                         Code
                     </button>
                     <button className=" hover:text-gray-500  font-bold py-4 px-4 ">
-                        Details
+                        <Link to='projectDetails'>Details</Link>
                     </button>
                 </div>
             </div>

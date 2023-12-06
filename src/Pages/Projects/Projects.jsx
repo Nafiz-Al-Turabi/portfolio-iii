@@ -9,7 +9,7 @@ const Projects = () => {
         .then(result=>setProjects(result) )
     },[])
     return (
-        <div className='m-2'>
+        <div className='m-2 '>
             <div className='flex justify-between items-center mt-14 mb-10'>
                 <hr className='w-1/4 md:w-2/5 border border-zinc-300' />
                 <h1 className=' text-2xl font-bold'>My Projects</h1>

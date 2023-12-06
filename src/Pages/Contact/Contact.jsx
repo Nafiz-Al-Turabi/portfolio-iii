@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MdOutlineAlternateEmail, MdOutlineMail } from "react-icons/md";
 import { FaUser } from 'react-icons/fa6';
 import { useTheme } from '../../Provider/ThemeContext';
+import CallMe from '../../Components/CallMe/CallMe';
 
 const Contact = () => {
     const [nameInputFocus, setNameInputFocus] = useState(false);
@@ -68,7 +69,7 @@ const Contact = () => {
                         <h1 className='text-xl font-bold  mb-2 mt-10'>Get in touch</h1>
                         <form className={isDarkMode ? 'bg-zinc-900/80 px-5 py-10 space-y-10' : 'bg-zinc-300 px-5 py-10 space-y-10'}>
                             <div className='flex items-center'>
-                                <FaUser className={`bg-gray-500 text-xl w-12 h-12 p-3 ${nameInputFocus ? 'bg-yellow-300 text-gray-600 duration-500' : ''}`} />
+                                <FaUser className={`bg-gray-500 text-xl w-12 h-12 p-3  ${nameInputFocus ? 'bg-yellow-300 text-gray-600 duration-500 ' : ''}`} />
                                 <input
                                     onFocus={handleNameInputFocus}
                                     onBlur={handleNameInputBlur}
@@ -86,13 +87,13 @@ const Contact = () => {
                                 <textarea
                                     onFocus={handleMessageInputFocus}
                                     onBlur={handleMessageInputBlur}
-                                    type="text" name="message" id="" className='bg-zinc-700/10 placeholder:text-gray-600 w-full h-32 p-3 focus:outline-none' placeholder='Message' />
+                                    type="text" name="message" id="" className='bg-zinc-700/10 placeholder:text-gray-600 w-full h-32 p-3 focus:outline-none resize-none' placeholder='Message' />
                             </div>
                             <button type='submit' className='text-sm py-2 px-4 md:py-3 md:px-8 font-semibold tracking-widest bg-yellow-500 uppercase hover:-translate-y-1 duration-300'>
                                 Send Message
                             </button>
                         </form>
-                        
+                        <CallMe></CallMe>
                     </div>
                 </div>
             </ div>

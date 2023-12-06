@@ -1,15 +1,16 @@
 import React from 'react';
 import { useTheme } from '../../../Provider/ThemeContext';
 import projectImage from '../../../assets/background-1.jpg'
+import { Link } from 'react-router-dom';
 
 
 const ProjectsCard = ({ project }) => {
     const { isDarkMode } = useTheme();
     console.log(project)
-    const { title, image, technology, live, git, git_server } = project;
+    const { id,title, image, technology, live, git, git_server } = project;
 
     return (
-        <div className={isDarkMode ? 'w-full bg-slate-900/50 shadow-lg shadow-white/5 hover:-translate-y-2 cursor-pointer duration-300' : 'w-full bg-slate-300 shadow-lg hover:-translate-y-2 cursor-pointer duration-300'}>
+        <div className={isDarkMode ? 'w-full bg-slate-900/50 shadow-lg shadow-white/5 hover:-translate-y-2 cursor-pointer duration-300 rounded-xl md:rounded-none' : 'w-full bg-slate-300 shadow-lg hover:-translate-y-2 cursor-pointer duration-300 rounded-xl md:rounded-none'}>
             <h1 className={isDarkMode ? 'bg-zinc-900/80 font-semibold text-2xl p-4 rounded-t-lg md:rounded-t-none' : 'bg-zinc-100 font-semibold text-2xl p-4 rounded-t-lg md:rounded-t-none'}>{title}</h1>
             <div className='md:flex '>
                 <div>
@@ -47,7 +48,7 @@ const ProjectsCard = ({ project }) => {
                     </button>
                 </a>
                 <button className=" hover:text-gray-500  font-bold py-4 px-4 ">
-                    Details
+                    <Link to={`/projectDetails/${id}`}>Details</Link>
                 </button>
             </div>
         </div>

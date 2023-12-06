@@ -12,6 +12,8 @@ import { TiHomeOutline } from "react-icons/ti";
 import { MdContacts } from "react-icons/md";
 import { TbBrandBlogger } from "react-icons/tb";
 import ActiveLink from '../Components/ActiveLink/ActiveLink';
+import ScrollToTopButton from '../Components/ScrollToTopButton/ScrollToTopButton';
+import CustomCursor from '../Components/CustomMouseTracker/CustomCursor';
 
 // import './Layout.css'
 
@@ -87,6 +89,8 @@ const Layout = () => {
                     <p>Email: nafizalturabi@gmail.com</p>
 
                 </div>
+                <ScrollToTopButton></ScrollToTopButton>
+                <CustomCursor></CustomCursor>
                 <div>
                     <button className='fixed top-0 right-10' onClick={toggleDarkMode}>
                         {isDarkMode ? <img className='h-20' src={lightOff} alt="" /> : <img className='h-20' src={light} alt="" />}

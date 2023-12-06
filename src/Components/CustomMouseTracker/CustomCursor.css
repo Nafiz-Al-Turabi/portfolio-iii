@@ -1,0 +1,70 @@
+/* CustomCursor.css */
+
+.custom-cursor {
+    width: 2px;
+    height: 2px;
+    background-color: #00f2ff; /* Customize the cursor color */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s ease-in-out infinite; /* Add the pulse animation */
+    transition: .1s ;
+    z-index: 999;
+
+  }
+.custom-cursor3 {
+    width:4px;
+    height:4px;
+    background-color: #ff6a00; /* Customize the cursor color */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s ease-in-out infinite; /* Add the pulse animation */
+    transition: .15s ;
+    z-index: 999;
+
+  }
+.custom-cursor4 {
+    width:5px;
+    height:5px;
+    background-color: #f6ff00; /* Customize the cursor color */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s ease-in-out infinite; /* Add the pulse animation */
+    transition: .2s ;
+    z-index: 999;
+
+  }
+  
+.custom-cursor2 {
+    
+    width: 15px;
+    height: 15px;
+    border: 1px solid #808080; /* Customize the cursor color */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-35%, -35%);
+     /* Add the pulse animation */
+     transition: .2s;
+     z-index: 999;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Adjust the scale factor for the pulse effect */
+      background-color: #00ffe1; /* Change to a different color during the pulse */
+    }
+    100% {
+      transform: scale(1);
+      background-color: #00a2ff; /* Return to the original color */
+    }
+  }
+  
