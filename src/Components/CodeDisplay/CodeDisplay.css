@@ -1,0 +1,26 @@
+/* CodeRenderer.css */
+
+.code-renderer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.code-container,
+.output-container {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.code-container h2,
+.output-container h2 {
+  margin-bottom: 10px;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.output-container div {
+  white-space: pre-wrap;
+}

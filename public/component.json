@@ -1,0 +1,15 @@
+[
+    {
+      "code": "<button class=\"bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded float-end\">Success Button</button>",
+      "category":"button"
+    },
+    {
+      "code": "<div class='bg-black w-56 mx-auto p-5 rounded-xl'>\n  <h1 class='text-xl font-bold text-center my-5'>Nafiz Al Turabi</h1>\n  <img src=\"https://i.ibb.co/8gyZq4y/img-1.jpg\" alt=\"\" />\n  <button class='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded float-end mt-5'>Read More</button>\n</div>",
+      "category":"card"
+    },
+    {
+      "code": "<div class='bg-black w-56 mx-auto p-5 rounded-xl'>\n  <h1 class='text-xl font-bold text-center my-5'>Nafiz Al Turabi</h1>\n  <img src=\"https://i.ibb.co/8gyZq4y/img-1.jpg\" alt=\"\" />\n  <button class='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded float-end mt-5'>Read More</button>\n</div>",
+      "category":"card"
+    }
+  ]
+  

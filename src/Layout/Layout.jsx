@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFacebook, FaGit, FaInstagram } from 'react-icons/fa6';
+import { FaFacebook, FaGit, FaInstagram,FaQrcode } from 'react-icons/fa6';
 import { FaBars, FaLinkedinIn, FaSignOutAlt } from 'react-icons/fa';
 import my_image from '../assets/my-image.jpg'
 import { Link, Outlet } from 'react-router-dom';
@@ -41,7 +41,7 @@ const Layout = () => {
                     } md:translate-x-0`}
             >
 
-                <div className={isDarkMode ? "bg-zinc-900/80 h-screen  md:h-screen lg:h-full w-full md:w-full lg:w-80 mt-10  md:mt-10  lg:mt-0  flex flex-col justify-between " : "bg-zinc-100 h-screen  md:h-screen lg:h-full w-full md:w-full lg:w-80 mt-10  md:mt-10  lg:mt-0  flex flex-col justify-between "}>
+                <div className={isDarkMode ? "bg-zinc-900/80 h-full  md:h-screen lg:h-full w-full md:w-full lg:w-80 mt-  md:mt-10  lg:mt-0  flex flex-col justify-between " : "bg-zinc-100 h-screen  md:h-screen lg:h-full w-full md:w-full lg:w-80 mt-  md:mt-10  lg:mt-0  flex flex-col justify-between "}>
                     <div>
                         <div className={isDarkMode ? 'bg-zinc-800 backdrop-blur-sm  py-5' : 'bg-zinc-300 backdrop-blur-sm  py-5'}>
                             <div className='flex justify-center '>
@@ -75,7 +75,7 @@ const Layout = () => {
                     <FaBars className="text-gray-700 text-2xl" />
                 </button>
 
-                <div className={isDarkMode ? "flex items-center bg-zinc-900/50 p-4 m-2  space-x-10 pr-4" : "flex items-center bg-zinc-300 p-4 m-2  space-x-10 pr-4"}>
+                <div className={isDarkMode ? "lg:flex items-center bg-zinc-900/50 p-4 m-2  space-x-10 pr-4" : "lg:flex items-center bg-zinc-300 p-4 m-2  space-x-10 pr-4"}>
                     <ActiveLink to="/" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Home'><TiHomeOutline /></ActiveLink>
 
                     <ActiveLink to="/projects" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Projects'><GoProjectTemplate /></ActiveLink>
@@ -83,6 +83,7 @@ const Layout = () => {
                     <ActiveLink to="/contact" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Contact'><MdContacts /></ActiveLink>
 
                     <ActiveLink to="/blogs" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Blogs'><TbBrandBlogger /></ActiveLink>
+                    <ActiveLink to="/componentLibrary" className='text-3xl hover:text-[#f9fc2f] duration-300 ease-linear' title='Components'><FaQrcode /></ActiveLink>
                 </div>
 
                 <Outlet />
