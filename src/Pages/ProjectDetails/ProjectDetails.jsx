@@ -42,7 +42,7 @@ const ProjectDetails = () => {
 
                             <div className={isDarkMode ? 'flex space-x-2 justify-center items-center px-1 py-5 bg-zinc-500 w-1/2 ' : 'flex space-x-2 justify-center items-center px-1 py-5 bg-zinc-100 w-1/2 '}>
                                 <h1 className='font-bold'>Category:</h1>
-                                <h1 className='font-extrabold text-green-500'>{category}</h1>
+                                <h1 className='text-sm font-extrabold text-green-500'>{category}</h1>
                             </div>
                         </div>
                         <div className='mt-5'>

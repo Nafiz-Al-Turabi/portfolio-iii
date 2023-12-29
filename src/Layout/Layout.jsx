@@ -21,7 +21,7 @@ const Layout = () => {
     const [isDrawerOpen, setDrawerOpen] = useState(true);
     const { isDarkMode, toggleDarkMode } = useTheme();
     const [isMenuOpen, setMenuOpen] = useState(false);
-    
+
 
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -37,22 +37,25 @@ const Layout = () => {
     return (
         <div className={`flex  ${isDarkMode ? 'dark' : 'light'}`}>
             <nav
-                className={`bg-yellow-500 w-full lg:w-0  md:bg-transparent h-screen md:h-[98%] lg:h-[98%] fixed   md:rounded-lg lg:rounded-none p-5 text-white py-4 transition-transform transform z-50 ${isDrawerOpen ? 'translate-x-0 duration-700' : '-translate-x-full'
+                className={`bg-yellow-500 w-full lg:w-0  md:bg-transparent h-screen md:h-[98%] lg:h-[98%] fixed   md:rounded-lg lg:rounded-none p-5  py-4 transition-transform transform z-50 ${isDrawerOpen ? 'translate-x-0 duration-700' : '-translate-x-full'
                     } md:translate-x-0`}
             >
 
-                <div className="h-screen  md:h-screen lg:h-[90%] w-full md:w-full lg:w-80 mt-10  md:mt-10  lg:mt-0  ">
-                    <div className='backdrop-blur-sm bg-zinc-500/30 py-5'>
-                        <div className='flex justify-center '>
-                            <img className='h-24 rounded-full' src={my_image} alt="" />
-                        </div>
-                        <h1 className='text-center mt-2 font-bold'>Nafiz Al Turabi</h1>
-                        <p className='text-gray-500 font-semibold text-center mt-4'>Full Stack Web Developer</p>
-                    </div>
+                <div className={isDarkMode ? "bg-zinc-900/80 h-screen  md:h-screen lg:h-full w-full md:w-full lg:w-80 mt-10  md:mt-10  lg:mt-0  flex flex-col justify-between " : "bg-zinc-100 h-screen  md:h-screen lg:h-full w-full md:w-full lg:w-80 mt-10  md:mt-10  lg:mt-0  flex flex-col justify-between "}>
                     <div>
-                        <Details></Details>
+                        <div className={isDarkMode ? 'bg-zinc-800 backdrop-blur-sm  py-5' : 'bg-zinc-300 backdrop-blur-sm  py-5'}>
+                            <div className='flex justify-center '>
+                                <img className='h-24 rounded-full' src={my_image} alt="" />
+                            </div>
+                            <h1 className='text-center mt-2 font-bold'>Nafiz Al Turabi</h1>
+                            <p className='text-gray-500 font-semibold text-center mt-4'>Full Stack Web Developer</p>
+                        </div>
+                        <div>
+                            <Details></Details>
+                        </div>
                     </div>
-                    <div className='backdrop-blur-md bg-zinc-500/50 flex items-certer justify-center py-2 space-x-5'>
+                    <div className={isDarkMode ? 'bg-zinc-800 flex items-certer justify-center py-2 space-x-5'
+                    : 'bg-zinc-300 flex items-certer justify-center py-2 space-x-5'}>
                         <FaFacebook className='text-2xl text-white border border-gray-50 p-1' />
                         <FaLinkedinIn className='text-2xl text-white border border-gray-50 p-1' />
                         <FaGit className='text-2xl text-white border border-gray-50 p-1' />
@@ -84,9 +87,14 @@ const Layout = () => {
 
                 <Outlet />
 
-                <div className={isDarkMode ? "flex justify-between  bg-zinc-900/80 mt-10 p-5 mx-2 mb-6" : "flex justify-between  bg-zinc-300 mt-10 p-5 mx-2 mb-6"}>
+                <div className={isDarkMode ? "flex justify-between items-center  bg-zinc-900/80 mt-10 p-5 mx-2 mb-6" : "flex justify-between  bg-zinc-300 mt-10 p-5 mx-2 mb-6"}>
                     <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
-                    <p>Email: nafizalturabi@gmail.com</p>
+                    <div className='flex items-certer justify-center py-2 space-x-5'>
+                        <FaFacebook className='text-2xl text-white border border-gray-50 p-1' />
+                        <FaLinkedinIn className='text-2xl text-white border border-gray-50 p-1' />
+                        <FaGit className='text-2xl text-white border border-gray-50 p-1' />
+                        <FaInstagram className='text-2xl text-white border border-gray-50 p-1' />
+                    </div>
 
                 </div>
                 <ScrollToTopButton></ScrollToTopButton>

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const ProjectsCard = ({ project }) => {
     const { isDarkMode } = useTheme();
     console.log(project)
-    const { id,title, image, technology, live, git, git_server } = project;
+    const { id, title, image, technology, live, git, git_server } = project;
 
     return (
         <div className={isDarkMode ? 'w-full bg-slate-900/50 shadow-lg shadow-white/5 hover:-translate-y-2 cursor-pointer duration-300 rounded-xl md:rounded-none' : 'w-full bg-slate-300 shadow-lg hover:-translate-y-2 cursor-pointer duration-300 rounded-xl md:rounded-none'}>
@@ -21,12 +21,12 @@ const ProjectsCard = ({ project }) => {
                     <div>
                         <ul className='grid grid-cols-4 md:grid-cols-2 gap-1 p-1'>
                             {
-                                technology.map(tech=>
+                                technology.map(tech =>
                                     <li className={isDarkMode ? 'text-xs bg-zinc-900/50 p-0.5 rounded-lg flex justify-center ' : 'text-xs bg-zinc-50 p-0.5 rounded-lg flex justify-center '}>{tech.name}</li>
-                                    )
+                                )
                             }
-                            
-                           
+
+
                         </ul>
                     </div>
                 </div>
@@ -42,11 +42,15 @@ const ProjectsCard = ({ project }) => {
                         Code
                     </button>
                 </a>
-                <a href={git_server} target='blank'>
-                    <button className="hover:text-green-500 duration-300   border-r  border-gray-400 font-bold py-4 px-4 ">
+                <a href={git_server || '#'} target='blank'>
+                    <button
+                        className={`hover:text-green-500 duration-300 border-r border-gray-400 font-bold py-4 px-4 ${!git_server ? 'text-gray-500' : ''}`}
+                        disabled={!git_server}
+                    >
                         Server
                     </button>
                 </a>
+
                 <button className=" hover:text-gray-500  font-bold py-4 px-4 ">
                     <Link to={`/projectDetails/${id}`}>Details</Link>
                 </button>

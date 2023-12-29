@@ -13,6 +13,7 @@ import Projects from './Pages/Projects/Projects.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import ProjectDetails from './Pages/ProjectDetails/ProjectDetails.jsx';
 import NotFound from './Pages/NotFound/NotFound.jsx';
+import Demu from './Pages/Demu/Demu.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,13 +37,17 @@ const router = createBrowserRouter([
         path: '/projectDetails/:id',
         element: <ProjectDetails></ProjectDetails>,
         loader: ({ params }) => fetch('data.json')
+      },
+      {
+        path:'/demu',
+        element:<Demu></Demu>
       }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <div className='md:w-[1540px] mx-auto'>
+  // <div className='container mx-auto'>
     <React.StrictMode>
       <ThemeProvider>
         <RouterProvider router={router} />

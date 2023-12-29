@@ -1,0 +1,14 @@
+.content-container {
+    opacity: 0;
+    height: 0;
+    /* overflow: hidden; */
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.content-container.open {
+    opacity: 1;
+    height: auto;
+}
+.hello{
+    height: fit-content;
+}

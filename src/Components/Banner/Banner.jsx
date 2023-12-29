@@ -2,20 +2,22 @@ import nafiz from '../../assets/nafiz.png'
 import { Link } from 'react-router-dom';
 import './Banner.css'
 import { useTheme } from '../../Provider/ThemeContext';
+import BannerProjectCard from '../Cards/BannerProjectCard/BannerProjectCard';
+import { useEffect, useState } from 'react';
 
 
 
 const Banner = () => {
-    // const [projects, setProjects] = useState([]);
-    // useEffect(() => {
-    //     fetch('data.json')
-    //         .then(res => res.json())
-    //         .then(data => setProjects(data))
-    // }, [])
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setProjects(data))
+    }, [])
     const { isDarkMode } = useTheme();
 
     return (
-        <div className='p-2 pb-10' id='scroll'>
+        <div className='p-2 pb-10'>
             <div className={isDarkMode ? 'lg:flex justify-between py-10 lg:py-0 lg:pb-0 bg-zinc-900/80 items-center w-full lg:h-96 lg:pr-10' : 'lg:flex justify-between py-10 lg:py-0 lg:pb-0  bg-[#fcfcc3] items-center w-full lg:h-96 lg:pr-10'}>
                 <div className='flex justify-center '>
                     <img src={nafiz} className='h-96 hidden lg:block' alt="" />
@@ -24,7 +26,7 @@ const Banner = () => {
                     <h1 className=' text-5xl lg:w-[550px] font-extrabold'>Discover my Amazing Art Space!</h1>
                     <p className=' text-2xlfont-bold md:font-extrabold mt-6 mb-10'>I'm <span className='animated-text text-base font-bold'>Jonior Full Stack Web Developer</span></p>
                     <button className='w-44 p-3 font-semibold  tracking-wider bg-yellow-500 sha hover:tracking-widest duration-300 '>
-                        <Link to='/'>Explore more</Link>
+                        <Link to='/projects'>Explore Now</Link>
                     </button>
                 </div>
             </div>
@@ -49,36 +51,24 @@ const Banner = () => {
                 <hr className='w-1/4 md:w-2/5 border border-zinc-300' />
             </div>
 
-            <div className={isDarkMode ? "w-full lg:w-80 rounded-3xl bg-zinc-900/50 overflow-hidden   shadow-lg shadow-white/5 relative" : "w-full lg:w-80 rounded-3xl bg-zinc-100 overflow-hidden shadow-lg  relative"}>
-                <img className="w-full rounded-tl-[70px] hover:scale-[110%] duration-300" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt='' />
-                <div className={isDarkMode ? 'absolute top-0 left-0 h-16 w-48 bg-zinc-900 rounded-br-[50px] flex justify-center items-center text-lg font-extrabold' : 'absolute top-0 left-0 h-16 w-48 bg-zinc-100 rounded-br-[50px] flex justify-center items-center text-lg font-extrabold'}>React.js</div>
-                <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2 text-center"> UNIVERSE OF UI </div>
-                </div>
-                <div className={isDarkMode ? "flex bg-zinc-900/50 justify-around p-4" : "flex bg-zinc-300 justify-around p-4"}>
-                    <button className=" hover:text-blue-500  font-bold py-4 px-4 ">
-                        Live
-                    </button>
-                    <button className="hover:text-green-500 duration-300 border-l  border-r  border-gray-400 font-bold py-4 px-4 ">
-                        Code
-                    </button>
-                    <button className=" hover:text-gray-500  font-bold py-4 px-4 ">
-                        <Link to='projectDetails'>Details</Link>
-                    </button>
-                </div>
-            </div>
+
             {/* projects */}
-            {/* <div className='mt-10'>
-                <h1 className='text-xl font-bold  mb-10'>My Recent Projects</h1>
-                <div className='grid grid-cols-1 gap-5'>
+            <div className='mt-10 '>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                     {
-                    projects.map(project=><ProjectCard
-                    key={project.id}
-                    project={project}
-                    ></ProjectCard>)
+                        projects.slice(0, 3).map(project => <BannerProjectCard
+                            key={project.id}
+                            project={project}
+                        ></BannerProjectCard>)
                     }
                 </div>
-            </div> */}
+            </div>
+
+            <div className='float-right mt-6'>
+                <button className={isDarkMode ? 'bg-zinc-900/80 text-lg font-semibold px-10 py-3 rounded-lg hover:bg-zinc-900 duration-300' : 'bg-[#f9fc2f] text-lg font-semibold px-10 py-3 rounded-lg hover:bg-yellow-500 duration-300 text-white'}>
+                    <Link to='/projects'>More</Link>
+                </button>
+            </div>
 
         </div>
     );
