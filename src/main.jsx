@@ -14,6 +14,7 @@ import Contact from './Pages/Contact/Contact.jsx';
 import ProjectDetails from './Pages/ProjectDetails/ProjectDetails.jsx';
 import NotFound from './Pages/NotFound/NotFound.jsx';
 import Demu from './Pages/Demu/Demu.jsx';
+import ComponentLibrary from './Pages/ComponentLibrary/ComponentLibrary.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path:'/demu',
         element:<Demu></Demu>
+      },
+      {
+        path:'/componentLibrary',
+        element:<ComponentLibrary></ComponentLibrary>
       }
     ]
   },
